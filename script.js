@@ -17,3 +17,21 @@ async function checkServer(){try{const r=await fetch('https://api.mcstatus.io/v2
 const observer=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(e=>observer.observe(e));
 addEventListener('scroll',()=>document.getElementById('nav')?.classList.toggle('scrolled',scrollY>30),{passive:true});
 checkServer();setInterval(checkServer,60000);
+
+const menuToggle=document.getElementById('menuToggle');
+const navLinks=document.getElementById('navLinks');
+if(menuToggle&&navLinks){
+ menuToggle.addEventListener('click',()=>{
+   const open=navLinks.classList.toggle('open');
+   menuToggle.setAttribute('aria-expanded',String(open));
+ });
+ navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+   navLinks.classList.remove('open');menuToggle.setAttribute('aria-expanded','false');
+ }));
+}
+window.addEventListener('load',()=>{
+ if(location.hash){
+   const target=document.querySelector(location.hash);
+   if(target)setTimeout(()=>target.scrollIntoView({behavior:'smooth',block:'start'}),120);
+ }
+});
