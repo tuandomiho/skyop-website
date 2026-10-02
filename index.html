@@ -1,7 +1,60 @@
-<!doctype html><html lang='vi'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>SKYOP • SkyBlock Việt Nam</title><meta name='description' content='SKYOP - Máy chủ Minecraft SkyBlock Việt Nam'><link rel='stylesheet' href='style.css'></head><body>
-<nav><div class='brand'>SKY<span>OP</span></div><div class='links'><a href='#home'>Trang chủ</a><a href='#features'>Tính năng</a><a href='#ranks'>Rank</a><a href='#join'>Tham gia</a></div><button class='small' onclick='copyIP()'>Sao chép IP</button></nav>
-<header id='home'><div class='shade'></div><div class='hero'><img src='assets/skyop-logo.jpg' alt='SKYOP SkyBlock'><p class='eyebrow'>MINECRAFT SKYBLOCK VIỆT NAM</p><h1>Xây đảo. Làm giàu.<br><span>Chinh phục SKYOP.</span></h1><p class='sub'>SkyBlock với Minion, kho tài nguyên, trade, crate, spawner và hệ thống phát triển đảo.</p><div class='actions'><button onclick='copyIP()'>CHƠI NGAY • SKYOP.FUN</button><a class='ghost' href='#features'>KHÁM PHÁ</a></div><div id='copymsg'></div></div></header>
-<main><section id='features'><p class='eyebrow'>TRẢI NGHIỆM SKYOP</p><h2>Một hòn đảo. Rất nhiều thứ để làm.</h2><div class='grid'><article><b>⛏</b><h3>Đào & phát triển</h3><p>Nâng cấp đảo, thu thập tài nguyên và xây dựng hệ thống farm của riêng bạn.</p></article><article><b>⚙</b><h3>Minion</h3><p>Tự động khai thác và đưa tài nguyên về kho để bạn phát triển nhanh hơn.</p></article><article><b>♜</b><h3>Spawner</h3><p>Xây farm, stack spawner và tối ưu sản lượng trên đảo SkyBlock.</p></article><article><b>✦</b><h3>Trade & Crate</h3><p>Đổi nguyên liệu, săn phần thưởng và mở khóa những trang bị mạnh hơn.</p></article></div></section>
-<section id='ranks' class='ranks'><p class='eyebrow'>CẤP BẬC</p><h2>Tiến xa hơn trên SKYOP</h2><div class='rankline'><span>VIP</span><span>MVP</span><span>ELITE</span><span>ALPHA</span><span>LORE</span><span>KING</span><span>ULTRA</span><span>MEGA</span></div></section>
-<section id='join' class='join'><div><p class='eyebrow'>SẴN SÀNG?</p><h2>Vào đảo của bạn ngay hôm nay.</h2><p>Thêm máy chủ Minecraft với địa chỉ bên dưới.</p></div><button onclick='copyIP()'><small>SERVER IP</small><strong>skyop.fun</strong><em>Nhấn để sao chép</em></button></section></main>
-<footer><div class='brand'>SKY<span>OP</span></div><p>Máy chủ Minecraft SkyBlock Việt Nam • skyop.fun</p></footer><script src='script.js'></script></body></html>
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#050b16">
+  <meta name="description" content="SKYOP - Máy chủ Minecraft SkyBlock Việt Nam. Xây đảo, làm giàu và chinh phục bảng xếp hạng.">
+  <title>SKYOP • SkyBlock Việt Nam</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="noise"></div><div class="orb orb-a"></div><div class="orb orb-b"></div>
+  <nav id="nav">
+    <a class="brand" href="#home"><span class="brand-mark">S</span><span>SKY<span>OP</span></span></a>
+    <div class="links"><a href="#home">Trang chủ</a><a href="#features">Tính năng</a><a href="#ranks">Cấp bậc</a><a href="#community">Cộng đồng</a></div>
+    <button class="nav-ip" onclick="copyIP()"><span class="status-dot"></span><span class="nav-ip-text">skyop.fun</span><b>SAO CHÉP</b></button>
+  </nav>
+
+  <header id="home">
+    <div class="hero-bg"></div><div class="hero-grid"></div><div class="hero-vignette"></div>
+    <div class="hero">
+      <div class="live-pill"><span class="status-dot"></span><span id="serverState">ĐANG KIỂM TRA SERVER</span><span class="live-sep"></span><span id="playerCount">JAVA</span></div>
+      <p class="eyebrow">MINECRAFT SKYBLOCK VIỆT NAM</p>
+      <h1>XÂY ĐẢO.<br>LÀM GIÀU.<br><span>THỐNG TRỊ BẦU TRỜI.</span></h1>
+      <p class="sub">Một thế giới SkyBlock được xây cho hành trình dài hạn — Minion, kho tài nguyên, Trade, Crate, Spawner và những cuộc đua Top đầy cạnh tranh.</p>
+      <div class="actions"><button class="primary" onclick="copyIP()"><span>CHƠI NGAY</span><strong>SKYOP.FUN</strong></button><a class="ghost" href="#features">KHÁM PHÁ SKYOP <span>↓</span></a></div>
+      <div id="copymsg" aria-live="polite"></div>
+      <div class="quick-stats"><div><b>01</b><span>SKYBLOCK</span></div><div><b>24/7</b><span>PHIÊU LƯU</span></div><div><b>∞</b><span>SÁNG TẠO</span></div></div>
+    </div>
+    <div class="scroll-hint"><span></span>CUỘN ĐỂ KHÁM PHÁ</div>
+  </header>
+
+  <main>
+    <section id="features" class="section-wrap reveal">
+      <div class="section-head"><div><p class="eyebrow">TRẢI NGHIỆM SKYOP</p><h2>Không chỉ là một<br><span>hòn đảo trên trời.</span></h2></div><p>Mỗi hệ thống đều được thiết kế để bạn luôn có mục tiêu tiếp theo: farm tốt hơn, trade nhanh hơn, trang bị mạnh hơn và đưa đảo lên một tầm cao mới.</p></div>
+      <div class="feature-grid">
+        <article class="feature feature-main"><div class="feature-no">01</div><div class="icon">⛏</div><h3>Đào & phát triển</h3><p>Thu thập tài nguyên, nâng cấp tiến trình và biến hòn đảo nhỏ thành một đế chế trên không.</p><div class="card-line"></div></article>
+        <article class="feature"><div class="feature-no">02</div><div class="icon">⚙</div><h3>Minion</h3><p>Tự động farm và đưa tài nguyên về kho để dây chuyền của bạn luôn hoạt động.</p><div class="card-line"></div></article>
+        <article class="feature"><div class="feature-no">03</div><div class="icon">♜</div><h3>Spawner</h3><p>Stack spawner, xây farm và tối ưu sản lượng cho nền kinh tế đảo.</p><div class="card-line"></div></article>
+        <article class="feature"><div class="feature-no">04</div><div class="icon">✦</div><h3>Trade & Crate</h3><p>Đổi nguyên liệu, mở phần thưởng và săn những vật phẩm đáng giá.</p><div class="card-line"></div></article>
+        <article class="feature wide"><div class="feature-no">05</div><div class="icon">▣</div><h3>Kho tài nguyên</h3><p>Quản lý lượng tài nguyên lớn gọn gàng hơn, phù hợp với lối chơi SkyBlock lâu dài.</p><div class="card-line"></div></article>
+        <article class="feature wide"><div class="feature-no">06</div><div class="icon">♛</div><h3>Đua Top đảo</h3><p>Phát triển, cạnh tranh và ghi tên hòn đảo của bạn lên bảng xếp hạng SKYOP.</p><div class="card-line"></div></article>
+      </div>
+    </section>
+
+    <section id="ranks" class="rank-section reveal">
+      <div class="rank-glow"></div><p class="eyebrow">CẤP BẬC SKYOP</p><h2>Từ người chơi mới<br>đến <span>huyền thoại.</span></h2><p class="rank-intro">8 cấp bậc tạo nên hành trình phát triển của bạn. Quyền lợi chi tiết sẽ được cập nhật khi cửa hàng chính thức mở.</p>
+      <div class="rank-track"><div class="rank vip"><small>01</small><b>VIP</b></div><div class="rank mvp"><small>02</small><b>MVP</b></div><div class="rank elite"><small>03</small><b>ELITE</b></div><div class="rank alpha"><small>04</small><b>ALPHA</b></div><div class="rank lore"><small>05</small><b>LORE</b></div><div class="rank king"><small>06</small><b>KING</b></div><div class="rank ultra"><small>07</small><b>ULTRA</b></div><div class="rank mega"><small>08</small><b>MEGA</b></div></div>
+    </section>
+
+    <section id="community" class="community section-wrap reveal">
+      <div class="community-card"><div class="community-copy"><p class="eyebrow">CỘNG ĐỒNG SKYOP</p><h2>Cuộc chơi bắt đầu<br><span>từ đây.</span></h2><p>Tham gia server, xây đảo cùng bạn bè và chuẩn bị cho những hệ thống, sự kiện và mùa giải tiếp theo của SKYOP.</p><div class="community-actions"><button class="primary compact" onclick="copyIP()">COPY IP • SKYOP.FUN</button><button class="outline" disabled>DISCORD • SẮP CẬP NHẬT</button></div></div><div class="server-card"><span class="server-label">SERVER ADDRESS</span><strong>skyop.fun</strong><div class="server-live"><span class="status-dot"></span><span id="serverState2">Đang kiểm tra...</span><span id="playerCount2"></span></div><button onclick="copyIP()">NHẤN ĐỂ SAO CHÉP</button></div></div>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#home"><span class="brand-mark">S</span><span>SKY<span>OP</span></span></a><p>SKYOP • Minecraft SkyBlock Việt Nam</p><div><a href="#features">Tính năng</a><a href="#ranks">Rank</a><a href="#home">Lên đầu ↑</a></div></footer>
+  <div class="toast" id="toast">✓ Đã sao chép <b>skyop.fun</b></div>
+  <script src="script.js"></script>
+</body>
+</html>
