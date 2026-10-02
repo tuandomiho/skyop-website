@@ -1,0 +1,1 @@
+function copyIP(){navigator.clipboard.writeText('skyop.fun').then(()=>{const e=document.getElementById('copymsg');if(e){e.textContent='✓ Đã sao chép: skyop.fun';setTimeout(()=>e.textContent='',2500)}})}
